@@ -38,7 +38,7 @@ green.onclick = function () {
 blue.onclick = function () {
   context.strokeStyle = 'blue'
   blue.classList.add('active')
-  blue.classList.remove('active')
+  green.classList.remove('active')
   red.classList.remove('active')
 }
 
@@ -64,6 +64,7 @@ function listenToUser(canvas) {
     }
 
     canvas.ontouchmove = function (e) {
+      e.preventDefault()
       const x = e.touches[0].clientX
       const y = e.touches[0].clientY
       if (!isUsing) return
@@ -93,6 +94,7 @@ function listenToUser(canvas) {
     }
 
     canvas.onmousemove = function (e) {
+      e.preventDefault()
       const x = e.clientX
       const y = e.clientY
       if (!isUsing) return
