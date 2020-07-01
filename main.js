@@ -141,3 +141,4 @@ function autoSetCanvasSize(canvas) {
     setCanvasSize()
   }
 }
+
